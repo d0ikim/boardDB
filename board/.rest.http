@@ -7,6 +7,15 @@ Content-Type: application/json
   "name": "doikim"
 }
 
+### 1-1. 유저 생성
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+  "email": "sericlub@naver.com",
+  "name": "serigil"
+}
+
 ### 2. 전체 유저 목록 조회
 GET http://localhost:3000/users
 

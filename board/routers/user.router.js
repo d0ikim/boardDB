@@ -37,9 +37,9 @@ router.post('/', async (req, res, next) => {
 router.get('/', async (req, res, next) => {
   const users = await prisma.users.findMany(); // prisma변수를 이용해 실제로 DB에 접근해 쿼리작업( users테이블에 있는 모든 유저 가져오기 )
   console.log(users);
-  return res.send({
-    users, // DB에서 모든 유저 출력
-  });
+  return res.send(
+    users // DB에서 모든 유저 출력
+  );
 });
 
 // 3. 특정 유저 정보 조회(GET)
