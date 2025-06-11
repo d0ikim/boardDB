@@ -21,6 +21,11 @@ router.post('/', async (req, res, next) => {
 });
 
 // 2. 전체 게시글 조회(GET)
+router.get('/', async (req, res, next) => {
+  const posts = await prisma.posts.findMany();
+  console.log(posts); // 잘 가져왔는지 확인
+  return res.send(posts); // DB에서 모든 게시글 출력
+});
 
 // 3. 특정 게시글 조회(GET)
 

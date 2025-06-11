@@ -31,11 +31,6 @@ Content-Type: application/json
   "name": "yukyeongkim"
 }
 
-### 5. 특정 유저의 게시글 조회
-GET http://localhost:3000/users/1/posts
-
-
-
 
 
 
@@ -75,6 +70,19 @@ Content-Type: application/json
   "content": "글쓴이 김도이",
   "userId": 1
 }
+
+
+
+
+
+### 5. 특정 유저의 게시글 조회
+GET http://localhost:3000/users/1/posts
+
+
+
+
+
+
 
 ### 5. 게시글 삭제
 DELETE http://localhost:3000/posts/1
