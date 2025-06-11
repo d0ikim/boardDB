@@ -73,7 +73,7 @@ Content-Type: application/json
 
 
 ### 5. 특정 유저의 게시글 조회
-GET http://localhost:3000/users/1/posts
+GET http://localhost:3000/users/2/posts
 
 
 

@@ -56,6 +56,14 @@ router.put('/:id', async (req, res, next) => {
 });
 
 // 5. 게시글 삭제(DELETE)
+router.delete('/:id', async (req,res,next) => {
+  await prisma.posts.delete({
+    where: { postId: parseInt(req.params.id) },
+  });
+  return res.send(	
+    { message: "deleted" }
+  );
+})
 
 export default router;
 // 다 만든 후 메인인 app.js에 가서,
