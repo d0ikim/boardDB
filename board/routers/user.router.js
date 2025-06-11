@@ -55,6 +55,22 @@ router.get('/:id', async (req, res, next) => {
 });
 
 // 4. 유저 정보 수정(PUT)
+router.put('/:id', async (req, res, next) => {
+  const userId = parseInt(req.params.id);
+  const { email, name } = req.body; // req.body에서 수정할 정보인 email과 name을 받아옴
+  let user = await prisma.users.findUnique({
+    where: { userId }, // userId를 이용해 특정 유저 찾기
+  });
+  console.log(user); // 잘 가져왔는지 확인
+  user = await prisma.users.update({
+    where: { userId },
+    data: { email: email, name: name },
+  });
+  console.log(user); // 수정된 유저 정보 확인
+  return res.send({
+    user, // 수정된 유저 정보 반환
+  });
+});
 
 // 5. 유저 삭제(DELETE)
 

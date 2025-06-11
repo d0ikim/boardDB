@@ -23,12 +23,12 @@ GET http://localhost:3000/users
 GET http://localhost:3000/users/2
 
 ### 4. 유저 정보 수정
-PUT http://localhost:3000/users/:1
+PUT http://localhost:3000/users/1
 Content-Type: application/json
 
 {
   "email": "kimyukyeong_99@naver.com",
-  "name": "yukyeongkim",
+  "name": "yukyeongkim"
 }
 
 ### 5. 유저 삭제
