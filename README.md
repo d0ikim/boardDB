@@ -38,3 +38,6 @@ Node.js(express) + dotenv + nodemon + MySQL + Prisma ORM 게시판 API 서버 �
 
 게시글 삭제
 ![image](https://github.com/user-attachments/assets/65153b06-c52c-46f7-a4ce-382ffd2f3bff)
+
+유저 삭제
+![image](https://github.com/user-attachments/assets/cb0274b9-8988-4d2e-8ccb-77648be5fc96)
