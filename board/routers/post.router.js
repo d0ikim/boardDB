@@ -28,6 +28,13 @@ router.get('/', async (req, res, next) => {
 });
 
 // 3. 특정 게시글 조회(GET)
+router.get('/:id', async (req, res, next) => {
+  const post = await prisma.posts.findUnique({
+    where: { postId: parseInt(req.params.id) },
+  });
+  console.log(post); // 잘 가져왔는지 확인
+  return res.send(post); // DB에서 특정 게시글 출력
+});
 
 // 4. 게시글 수정(PUT)
 
