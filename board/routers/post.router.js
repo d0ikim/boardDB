@@ -37,6 +37,23 @@ router.get('/:id', async (req, res, next) => {
 });
 
 // 4. 게시글 수정(PUT)
+router.put('/:id', async (req, res, next) => {
+  const postId = parseInt(req.params.id);
+  const { title, content } = req.body; // req.body에서 수정할 정보인 title, content를 받아옴
+  let post = await prisma.posts.findUnique({
+    where: { postId },
+  });
+  console.log(post); // 수정 전 게시글 정보 확인
+  post = await prisma.posts.update({
+    where: { postId },
+    data: {
+      title,
+      content,
+    },
+  });
+  console.log(post); // 수정 후 게시글 정보 확인
+  return res.send(post); // 수정된 게시글 정보 반환
+});
 
 // 5. 게시글 삭제(DELETE)
 

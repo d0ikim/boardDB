@@ -67,11 +67,8 @@ Content-Type: application/json
 
 {
   "title": "글 수정함",
-  "content": "글쓴이 김도이",
-  "userId": 1
+  "content": "글쓴이 김도이"
 }
-
-
 
 
 
