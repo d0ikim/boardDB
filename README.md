@@ -27,3 +27,8 @@ Node.js(express) + dotenv + nodemon + MySQL + Prisma ORM 게시판 API 서버 �
 
 특정 게시글 조회
 ![image](https://github.com/user-attachments/assets/3739cd38-dbab-49af-bd59-bed47634a273)
+
+
+게시글 수정
+![image](https://github.com/user-attachments/assets/277ffe9e-95b9-4f91-a491-8b3fdd84aed8)
+
