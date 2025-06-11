@@ -20,7 +20,7 @@ Content-Type: application/json
 GET http://localhost:3000/users
 
 ### 3. 특정 유저 정보 조회
-GET http://localhost:3000/users/:1
+GET http://localhost:3000/users/2
 
 ### 4. 유저 정보 수정
 PUT http://localhost:3000/users/:1

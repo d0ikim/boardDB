@@ -44,12 +44,11 @@ router.get('/', async (req, res, next) => {
 
 // 3. 특정 유저 정보 조회(GET)
 // id: number 라는 req.body를 받아서
-const id = 'id'; // :id로 라우터를 만들기 위해 변수 선언
-router.get(`/:${id}`, async (req, res, next) => {
-  const user = await prisma.user.findUnique({
-    where: { id: req.body.id },
+router.get('/:id', async (req, res, next) => {
+  const user = await prisma.users.findUnique({
+    where: { userId: parseInt(req.params.id) },
   });
-  console.log(user);
+  console.log(user); // 잘 가져왔는지 확인
   return res.send({
     user, // DB에서 특정 유저 출력
   });
