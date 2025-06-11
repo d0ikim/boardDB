@@ -84,7 +84,14 @@ router.get('/:id/posts', async (req,res,next)=> {
 })
 
 // 6. 유저 삭제(DELETE)
-// router.delete('/:id');
+router.delete('/:id', async (req,res,next) => {
+  await prisma.users.delete({
+    where: { userId: parseInt(req.params.id) },
+  });
+  return res.send(	
+    { message: "deleted" }
+  );
+})
 
 export default router;
 // 다 만든 후 메인인 app.js에 가서,
