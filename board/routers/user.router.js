@@ -72,9 +72,10 @@ router.put('/:id', async (req, res, next) => {
   });
 });
 
-// 5. 유저 삭제(DELETE)
+// 5. 특정 유저의 게시글 조회(GET)
 
-// 6. 특정 유저의 게시글 조회(GET)
+// 6. 유저 삭제(DELETE)
+// router.delete('/:id');
 
 export default router;
 // 다 만든 후 메인인 app.js에 가서,

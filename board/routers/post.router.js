@@ -1,12 +1,24 @@
 // [역할] 게시글(Post)와 관련된 작업을 하는 API 라우터
 // : 'Posts' 테이블을 건드리는 파일임
 // [연결] app.js에서 '/posts' 경로에 등록되어 동작함
-
 import express from 'express';
+import { prisma } from '../utils/prisma/index.js'; // 내보낸 prisma라는 유저(?)객체 가져옴
 
 const router = express.Router();
 
 // 1. 게시글 생성(POST)
+router.post('/', async (req, res, next) => {
+  const { title, content, userId } = req.body; // req.body에서 게시글의 제목, 내용, 작성자 ID를 받아옴
+  const newPost = await prisma.posts.create({
+    data: {
+      title,
+      content,
+      userId: parseInt(userId),
+    },
+  });
+  console.log(newPost); // 잘 생성되었는지 확인
+  return res.send(newPost); // 생성된 게시글 정보 반환
+});
 
 // 2. 전체 게시글 조회(GET)
 
