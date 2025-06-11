@@ -73,6 +73,15 @@ router.put('/:id', async (req, res, next) => {
 });
 
 // 5. 특정 유저의 게시글 조회(GET)
+router.get('/:id/posts', async (req,res,next)=> {
+  const post = await prisma.posts.findMany({
+    where: {
+      userId: parseInt(req.params.id)
+    }
+  })
+  console.log(post);  // 특정 유저의 게시글 잘 가져왔는지 확인
+  return res.send(post);
+})
 
 // 6. 유저 삭제(DELETE)
 // router.delete('/:id');
