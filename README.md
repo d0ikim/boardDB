@@ -1,6 +1,10 @@
 # boardDB
 Node.js(express) + dotenv + nodemon + MySQL + Prisma ORM 게시판 API 서버 과제
 
+## API 명세서 
+![image](https://github.com/user-attachments/assets/6bda3497-a166-4073-b61d-331dd6895345)
+
+
 유저 생성
 ![image](https://github.com/user-attachments/assets/5214c008-3726-4ff2-85a4-836f15c45b91)
 
